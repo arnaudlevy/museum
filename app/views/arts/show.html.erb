@@ -1,14 +1,11 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @art.title %>
-</p>
-
-<p>
-  <strong>Photo:</strong>
-  <%= @art.photo %>
-</p>
-
-<%= link_to 'Edit', edit_art_path(@art) %> |
-<%= link_to 'Back', arts_path %>
+<div class="row">
+  <div class="col-md-6">
+    <%= image_tag @art.photo, class: 'img-fluid' %>
+  </div>
+  <div class="offset-md-1 col-md-5">
+    <h1><%= @art.title %></h1>
+    <p class="small"><%= @art.description %></p>
+    <%= @art.dimensions %>
+    <%= link_to 'Edit', edit_art_path(@art), class: 'btn btn-primary' %>
+  </div>
+</div>

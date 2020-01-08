@@ -1,0 +1,14 @@
+<h1>Recherche de "<%= @term %>"</h1>
+
+<% @arts.each do |art| %>
+  <tr>
+    <td><%= art.author %></td>
+    <td><%= art.description %></td>
+    <td><%= art.title %></td>
+    <td><%= art.date %></td>
+    <td><%= art.dimensions %></td>
+    <td>
+      <img src="<%= art.photo %>" />
+    </td>
+  </tr>
+<% end %>
